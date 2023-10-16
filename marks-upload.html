@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style-marks-upload.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Marks Upload</h1>
+        <form id="marksForm">
+            <label for="scoreType">Choose Score Type:</label>
+            <select id="scoreType" required>
+                <option value="grade">Grade</option>
+                <option value="percentage">Percentage</option>
+            </select>
+
+            <div id="gradeFields">
+                <div class="input-container">
+                    <label for="mathsGrade">Maths Grade:</label>
+                    <select id="mathsGrade" required>
+                        <option value="S">S</option>
+                        <option value="A">A</option>
+                        <option value="A+">A+</option>
+                        <!-- Include options for grades for Maths here -->
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="physicsGrade">Physics Grade:</label>
+                    <select id="physicsGrade" required>
+                        <!-- Include options for grades for Physics here -->
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="chemistryGrade">Chemistry Grade:</label>
+                    <select id="chemistryGrade" required>
+                        <!-- Include options for grades for Chemistry here -->
+                    </select>
+                </div>
+            </div>
+
+            <div id="percentageFields" style="display: none;">
+                <div class="input-container">
+                    <label for="mathsPercentage">Maths Percentage:</label>
+                    <input type="number" step="0.01" min="0" max="100" id="mathsPercentage"
+                        placeholder="Enter Percentage" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="physicsPercentage">Physics Percentage:</label>
+                    <input type="number" step="0.01" min="0" max="100" id="physicsPercentage"
+                        placeholder="Enter Percentage" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="chemistryPercentage">Chemistry Percentage:</label>
+                    <input type="number" step="0.01" min="0" max="100" id="chemistryPercentage"
+                        placeholder="Enter Percentage" required>
+                </div>
+            </div>
+
+            <label for="fileUpload">Upload Transcript (PDF or Image):</label>
+            <input type="file" id="fileUpload" accept=".pdf, .jpg, .jpeg, .png" required>
+
+            <button onclick="submitMarks(event)">Submit</button>
+        </form>
+    </div>
+
+    <script src="script-marks-upload.js"></script>
+</body>
+
+</html>

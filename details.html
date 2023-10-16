@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style-details.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Personal Details</h1>
+        <form id="detailsForm">
+            <input type="text" placeholder="First Name" id="firstName" required>
+            <input type="text" placeholder="Middle Name" id="middleName" required>
+            <input type="text" placeholder="Last Name" id="lastName" required>
+            <input type="text" placeholder="Street Name 1" id="streetName1" required>
+            <input type="text" placeholder="Street Name 2" id="streetName2" required>
+            <input type="text" placeholder="City" id="city" required>
+            <input type="text" placeholder="State" id="state" required>
+            <select id="country" placeholder="Country" required>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <!-- Add more countries as needed -->
+            </select>
+            <input type="text" placeholder="Pincode" id="pincode" required>
+            <input type="email" placeholder="Email ID" id="email" required>
+            <input type="tel" placeholder="Phone Number" id="phone" required>
+            <button onclick="submitDetails()">Submit</button>
+        </form>
+
+    </div>
+
+    <script src="script-details.js"></script>
+</body>
+
+</html>
